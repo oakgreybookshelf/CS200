@@ -1,0 +1,65 @@
+Author: YOUR NAME
+Assignment: Analysis Lab
+Filename: report.txt
+Course: CSIT 200
+
+Part 1
+======
+
+Put the functions below in increasing order of growth rate. Place functions on the same line that grow at the same rate.
+
+For example.
+
+SLOWEST GROWING
+n
+log_2⁡(n^50)
+sqrt(n)
+n^1.5
+n^100
+n * log_2(⁡n)
+n^2
+2^n
+n!
+2^(n/2)
+n^3
+log_2(⁡n)
+FASTEST GROWING
+
+Assume some values for n to figure out the order.
+
+Part II
+=======
+
+a) Give big-O running times of
+
+    example1:
+    example2:
+    example3:
+    example4:
+    example5:
+
+b-c) Construct a text-based table of your results below. Adjust format to
+keet it clean and readable.
+
+|          | 500 | 750 | 1K | 1.5K | 2K | 10K | 50K | 100K | 500K | 1M | 10M |
+|----------|-----|-----|----|------|----|-----|-----|------|------|----|-----|
+| example1 |     |     |    |      |    |     |     |      |      |    |     |
+| example2 |     |     |    |      |    |     |     |      |      |    |     |
+| example3 |     |     |    |      |    |     |     |      |      |    |     |
+| example4 |     |     |    |      |    |     |     |      |      |    |     |
+| example5 |     |     |    |      |    |     |     |      |      |    |     |
+
+d) Predict runtime for N = 20M
+
+    example1:
+    example2:
+    example3:
+    example4:
+    example5:
+
+Part III
+========
+
+a-b)
+
+c)
