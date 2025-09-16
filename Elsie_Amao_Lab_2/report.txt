@@ -1,4 +1,4 @@
-Author: YOUR NAME
+Author: Elsie Amao
 Assignment: Analysis Lab
 Filename: report.txt
 Course: CSIT 200
@@ -11,18 +11,18 @@ Put the functions below in increasing order of growth rate. Place functions on t
 For example.
 
 SLOWEST GROWING
-n
+log_2(⁡n)
+n * log_2(⁡n)
 log_2⁡(n^50)
 sqrt(n)
-n^1.5
-n^100
-n * log_2(⁡n)
-n^2
-2^n
+ns
 n!
 2^(n/2)
+2^n
+n^1.5
+n^2
 n^3
-log_2(⁡n)
+n^100
 FASTEST GROWING
 
 Assume some values for n to figure out the order.
@@ -32,34 +32,42 @@ Part II
 
 a) Give big-O running times of
 
-    example1:
-    example2:
-    example3:
-    example4:
-    example5:
+    example1: n
+    example2: n
+    example3: n^2
+    example4: n
+    example5: n^3
 
 b-c) Construct a text-based table of your results below. Adjust format to
 keet it clean and readable.
-
+*assume 500-2k numbers are e-05 and 10k-100k are 10^2
 |          | 500 | 750 | 1K | 1.5K | 2K | 10K | 50K | 100K | 500K | 1M | 10M |
 |----------|-----|-----|----|------|----|-----|-----|------|------|----|-----|
-| example1 |     |     |    |      |    |     |     |      |      |    |     |
-| example2 |     |     |    |      |    |     |     |      |      |    |     |
-| example3 |     |     |    |      |    |     |     |      |      |    |     |
-| example4 |     |     |    |      |    |     |     |      |      |    |     |
-| example5 |     |     |    |      |    |     |     |      |      |    |     |
+| example1 |1.40 |1.80 |3.05|4.04  |5.37|.402 |.316 |.352  |.017  |.031|.361 |
+| example2 |1.20 |2.17 |2.83|0.00  |4.53|.030 |.158 |.316  |.015  |.036|.241 |
+| example3 |1.33 |1.75 |2.41|3.56  |4.54|.023 |.219 |.338  |.016  |.025|1.01 |
+| example4 |3.32 |1.85 |2.61|3.46  |5.05|.097 |.450 | 1.03 | .049 |.089|1.14 |
+| example5 |3.86 |3.15 |2.20|6.34  |4.47|.641 |.600 |.778  |.047  |.124|1.12 |
 
 d) Predict runtime for N = 20M
 
-    example1:
-    example2:
-    example3:
-    example4:
-    example5:
+    example1: .72
+    example2: .38
+    example3: 1.5
+    example4: 1.9
+    example5: 2
 
 Part III
 ========
 
 a-b)
+|          | 100 | 1K | 10K | 100K |
+|----------|-----|----|-----|------|
+| average1 |1.90 |3.35|.682 |.765  |
+| average2 |1.26 |2.78|.0477|.893  |
+| average3 |1.28 |2.39|.029 |.903  |
 
 c)
+estimate1 = 2.94
+estimate2 = 2.64
+estimate3 = 2.45
