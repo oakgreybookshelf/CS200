@@ -1,4 +1,4 @@
-LIFO vs. FILO--------------------------------------
+LIFO vs. FILO https://stackoverflow.com/questions/61775669/is-filo-always-lifo
 
 Structure holds [first] element and a FIFO [buffer].
 There is a helper function for total count.
