@@ -113,8 +113,8 @@ def generate_sequence(n):
     '''Generate a list of n random integers, each in the range of 0 to 10*n'''
     sequence = []
     for num in range(n):
-        sequence.append((random.randint(0,9)))
+        sequence.append((random.randint(0,10*n)))
     return sequence
-
+#rerun the code
 
 main()

@@ -1,0 +1,18 @@
+Author: Elsie Amao
+Assignment: Lab 3 - Arrays
+Filename: report.txt
+Course: CSIT 200-01, Fall 2024
+
+Answers to Part 2
+
+1. T(n) = k
+
+2. T(n) = k
+
+3. T(n) = k/4
+
+4. T(n) = 1
+
+5. finds the average. Name: avg()
+
+6. T(n) = k2 for both functions

@@ -101,8 +101,8 @@ def second_max(int_list):
     print(max2)
     
 #OUTPUT
-word_cound(5, ['green', 'blue', 'marigold'])
+#word_cound(5, ['green', 'blue', 'marigold'])
 print()
 prime_info([2, 3, 13, 15, 17, 18, 18, 14])
-redundance_info([3,6,8,7])
-second_max([12, 34, 203, 98, 67]) # output should be 98
+#redundance_info([3,6,8,7])
+#second_max([12, 34, 203, 98, 67]) # output should be 98

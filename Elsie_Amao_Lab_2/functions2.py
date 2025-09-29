@@ -1,5 +1,5 @@
 ####### Code for Part II #######
-'''
+
 def example1(S):
     """Return the sum of the elements in sequence S."""
     n = len(S)
@@ -47,7 +47,7 @@ def example5(A, B):                     # assume that A and B have equal length
         if B[i] == total:
             count += 1
     return count
-'''
+
 ####### Code for Part III #######
 
 def prefix_average1(S):
