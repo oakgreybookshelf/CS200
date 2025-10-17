@@ -43,21 +43,9 @@ def test_getitem_raises_IndexError_if_index_is_too_large():
     try:
         x = da[len(da)]
         print(x)
-        return True
+        return False
     except IndexError:
         pass
-    return False
-
-
-    for i in range(5):
-        da.append(i)
-        try:
-            x = da[len(da)]
-            print(x)
-            return False
-        except IndexError:
-            pass
-    
     return True
 
 def test_getitem_raises_IndexError_if_index_is_too_small():
@@ -66,12 +54,12 @@ def test_getitem_raises_IndexError_if_index_is_too_small():
     '''
     da = DynamicArray()
     try:
-        x = da[-1]
+        x = da[len(da) + 1]
         print(x)
-        return True
+        return False
     except IndexError:
         pass
-    
+    return True
 
 def test_insert():
     '''

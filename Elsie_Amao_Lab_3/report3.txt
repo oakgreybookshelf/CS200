@@ -5,7 +5,7 @@ Course: CSIT 200-01, Fall 2024
 
 Answers to Part 2
 
-1. T(n) = k
+1. T(n) = k. It's the same.
 
 2. T(n) = k
 

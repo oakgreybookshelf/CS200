@@ -27,8 +27,10 @@ class DynamicArray:
 
     def __getitem__(self, k):
         """Return element at index k."""
-        if k < 0:
-            return self._A[k]
+        if k < -self._n:
+            raise IndexError('Invalid index')
+        elif k < 0:
+            raise IndexError("Invalid index")
         elif k >= self._n:
             raise IndexError('Invalid index')
         return self._A[k]                           # Retrieve from array
@@ -90,6 +92,8 @@ class DynamicArray:
     def __eq__(self, other):
         if self == other:
             return True
+        else:
+            return False
 
     def __str__(self):
         """Return a string represntation of the array."""
