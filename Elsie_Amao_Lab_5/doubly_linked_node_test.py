@@ -227,21 +227,21 @@ def test_delete_next_general():
     return True
 
 def run_all_tests():
-    try:
-        print('Test node:', test_node())
-        print('Test link as next:', test_link_as_next())
-        print('Test link as next None:', test_link_as_next_None())
-        print('Test link as next to a different node:', test_link_as_next_to_a_different_node())
-        print('Test clear:', test_clear())
-        print('Test insert before next:', test_insert_before_next())
-        print('Test insert before next without next:', test_insert_before_next_without_next())
-        print('Test insert before next both have next:', test_insert_before_next_both_have_next())
-        print('Test insert before next only other has next:', test_insert_before_next_only_other_has_next())
-        print('Test delete next when next is None:', test_delete_next_when_next_is_None())
-        print('Test delete next when next next is None:', test_delete_next_when_next_next_is_None())
-        print('Test delete next general:', test_delete_next_general())
-    except Exception as e:
-        print('FAILED one or more tests due to exception')
-        traceback.format_exc()
+    #try:
+    print('Test node:', test_node())
+    print('Test link as next:', test_link_as_next())
+    print('Test link as next None:', test_link_as_next_None())
+    print('Test link as next to a different node:', test_link_as_next_to_a_different_node())
+    print('Test clear:', test_clear())
+    print('Test insert before next:', test_insert_before_next())
+    print('Test insert before next without next:', test_insert_before_next_without_next())
+    print('Test insert before next both have next:', test_insert_before_next_both_have_next())
+    print('Test insert before next only other has next:', test_insert_before_next_only_other_has_next())
+    print('Test delete next when next is None:', test_delete_next_when_next_is_None())
+    print('Test delete next when next next is None:', test_delete_next_when_next_next_is_None())
+    print('Test delete next general:', test_delete_next_general())
+    #except Exception as e:
+        #print('FAILED one or more tests due to exception')
+        #traceback.format_exc()
 
 run_all_tests()

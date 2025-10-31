@@ -14,13 +14,27 @@ class DoublyLinkedNode:
         Do not adjust links between any other nodes.
         '''
         # TODO: Your implementation here.
-
+       # if new_next == None:
+            #new_next.previous = self
+            #new_next.next = self.next
+            #self.next.previous = None
+            #self.next = None
+       # else: 
+        if new_next is not None:
+            new_next.previous = self
+        self.next = new_next
+        #new_next = self.next.previous
+        #self.next = new_next
+        
     def clear(self):
         '''
         Set all references to None. Use this after removing
         a node for a structure to prevent retension.
         '''
         # TODO: Your implementation here.
+        self.item = None
+        self.next = None
+        self.previous = None
 
     def insert_before_next(self, node):
         '''
@@ -51,6 +65,23 @@ class DoublyLinkedNode:
                       `- d
         '''
         # TODO: Your implementation here. Hint: use link_as_next() a couple times.
+        if self.next != None:
+            node.previous = self
+            node.next = self.next
+            node.next.previous = node
+            self.next = node
+        elif self.next == None:
+            node.previous = self
+            self.next = node
+        elif (self.next == None) and (node.next != None):
+            self.next.next = node
+            node.previous = self.next
+        elif (self.next != None) and (node.next != None):
+            node.previous = self
+            node.next = self.next.next
+            self.next.previous = node
+            self.next.previous.next = node
+            self.delete_next(self.next.next.next)
 
     def delete_next(self):
         '''
@@ -76,3 +107,15 @@ class DoublyLinkedNode:
         Notice b still points to the others.
         '''
         # TODO: Your implementation here. Hint: use link_as_next().
+        if self.next == None:
+            raise IndexError
+        elif self.next.next == None:
+            self.item.previous.next = self.item.next
+        else:
+            self.previous.next = self.item.next
+            self.next.previous = self.item.previous
+
+        new_next.previous = self
+        new_next.next = self.next
+        self.next = new_next
+        new_next.next.previous = new_next

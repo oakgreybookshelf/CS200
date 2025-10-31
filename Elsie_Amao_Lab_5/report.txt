@@ -4,11 +4,18 @@ Course:
 
 Part I
 
-1.
+1. It's better to implement a deque as a doubly linked list
+because a deck can add/remove from the front and the back.
+A single linked list can only  be edited at the front.
 
-2.
+2. It would not be necessary to implement a deque as a 
+circularly linked list because a deque doesn't need to shift
+indeces.
 
-3.
+3. Yes it would beenfit from a tail reference, because when
+the last element is removed a pointer is needed to identify
+the new last element. It would be in addition to a head references
+because the deque can add/remove from the beginning and end.
 
 4.
 
