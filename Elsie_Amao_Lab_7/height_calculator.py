@@ -12,14 +12,31 @@ class BinaryTreeNode:
 
 # Uncomment the following functions and implement them.
 
-def tree_height(input):
+def tree_height(root):
   # add your implementation for height calculation.
   # YOU MUST USE THE SAME IMPLEMENTATION FOR ALL THE TREES CREATED.
   # Meaning, it should be a generic one that can calculate height for any binary tree.
-    height =
-    root = input[0]
+  if root is None:
+    return 0
+  else:
+    leftheight = tree_height(root.left)
+    rightheight = tree_height(root.right)
+    return 1 + max(leftheight, rightheight) 
+    """root = input[0]
     node = BinaryTreeNode(root)
-    input.remove(input[0])
+    input.remove(input[0])"""
+
+    if input.root is None:
+        height = 0
+        return height
+    elif (root.left is None) and (root.right is None):
+        height = 1
+    elif root.left is not None:
+        height += 1
+        root = root.left
+        tree_height(input)
+
+
 # leaf node is base case, left and right would be none
 # Base case: when root is none return -1, one node height is 0
     if input != []:
@@ -45,16 +62,48 @@ def tree_height(input):
         height += 0
     """
 
-
-
-# a, b, c, d, e, f, g, h, i, j, k
+def creat_tree(input):
+    # Add your implementation here to create the binary trees specified in the lab instructions
+    #root = input[0]
+    #height = len()
+    node = BinaryTreeNode(root)
+    #input.remove(input[0])
+    height = 0
+    def fun(input, height):
+        root = input[0]
+        input.remove(input[0])
+        if root is None:
+            print(height)
+        elif (root.left is None) and (root.right is None):
+            print(height + 1)
+        else:
+            height += 1
+            input.remove(input[0])
+            fun(input, height)
+    fun(input, height)
+"""
+    
+    elif len(input) >= 1:
+        if input[0] < root:
+            if node.left is not None:
+                height += 1
+            else:
+                next_node = BinaryTreeNode(input[0])
+                node.left = next_node
+            creat_tree(input)
+        else:
+            if node.right is not None:
+                height += 1
+            else:
+                next_node = BinaryTreeNode(input[0])
+                node.right = next_node
+            creat_tree(input)
+    else:
+        print("k")
+        print(height, 'l')
+"""
 def create_tree(input):
     # Add your implementation here to create the binary trees specified in the lab instructions
-    """
-    for i in input:
-        if i is not None:
-            i = input[]
-    """
     root = input[0]
     node = BinaryTreeNode(root)
     input.remove(input[0])
@@ -71,48 +120,43 @@ def create_tree(input):
             create_tree(input)
     else:
         print('done')
+    """
+    root = input[0]
+    node = BinaryTreeNode(root)
+    input.remove(input[0])
+    def create_ree(input, root):
+        #node = BinaryTreeNode(root)
+        if input != []:
+            if input[0] < root:
+                if node.left is None:
+                    next_node = BinaryTreeNode(input[0])
+                    node.left = next_node
+                create_ree(input, node.left)
+            else:
+                if node.right is None:
+                    next_node = BinaryTreeNode(input[0])
+                    node.right = next_node
+                create_ree(input, node.right)
+        else:
+            print('done')
+    create_ree(input, root)
+    """
 
-"""
-    node1 = BinaryTreeNode(a)
-    if (b < a) and (c > a):
-        node1.left = BinaryTreeNode(b)
-        node1.right = c
-    elif (b < a) and (c < a):
-        node1.left  = BinaryTreeNode(b)
-        BinaryTreeNode(b).left = BinaryTreeNode(c)
-    elif (b > a) and (c < a):
-        node1.right  = BinaryTreeNode(b)
-        node1.left  = BinaryTreeNode(c)
-    else:
-        node1.right = BinaryTreeNode(b)
-        BinaryTreeNode(b).right = BinaryTreeNode(c)
+def pre_order_dfs(node):
+    if node is None:
+        return
+    print(node.data, end=' ')
+    height += 1
+    pre_order_dfs(node.left)
+    pre_order_dfs(node.right)
 
-
-    node4 = BinaryTreeNode(d)
-    node5 = BinaryTreeNode(e)
-    node6 = BinaryTreeNode(f)
-    node7 = BinaryTreeNode(g)
-    node8 = BinaryTreeNode(h)
-    node9 = BinaryTreeNode(i)
-    node10 = BinaryTreeNode(j)
-    node11 = BinaryTreeNode(k)
-    node1.left = node2
-    node1.right = node3
-    node2.left = node4
-    node2.right = node5
-    node3.left = node6
-    node3.right = node7
-    node4.left = node8
-    node4.right = node9
-    node5.left = node10
-    node5.right = node11
-
-"""
 
 def main():
     # Call the function for each tree to find its height, and print the heights.
     tree1 = create_tree([35, 4, 80, 2, 20,45,15])
     tree2 = create_tree([35, 14, 68, 9, 24, 45, 75])
     tree3 = create_tree([50, 37, 98, 39, 85, 45, 75])
-    tree_height([35, 4, 80, 2, 20,45,15])
+    #tree_height([35, 4, 80, 2, 20,45,15])
+    tree_height(tree1.root)
+    #creat_tree([35, 4, 80, 2, 20,45,15])
 main()

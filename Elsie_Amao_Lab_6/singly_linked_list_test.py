@@ -4,14 +4,18 @@ import traceback
 def test_insertion():
     a = SingleLinkedList()
     a.insert_at_start('a')
-    #display = a.display()
+    print(a.head)
     if a.head != 'a':
         return False
     return True
 
-# INSER TAT END
 def test_end_insert():
-    pass
+    a = SingleLinkedList()
+    a.insert_at_start('b')
+    a.insert_at_end('a')
+    if a.head != 'a':
+        return False
+    return True
 
 def test_deletion():
     a = SingleLinkedList()
@@ -40,7 +44,7 @@ def test_search_none():
     a.insert_at_start('c')
     a.insert_at_start('d')
     search = a.search('e')
-    if search != None:
+    if search is None:
         return False
     return True
 
@@ -50,7 +54,7 @@ def test_display():
     a.insert_at_start('c')
     a.insert_at_start('d')
     display = a.display()
-    if display != ['d']:
+    if display != ['d', 'c', 'b']:
         return False
     return True
 
@@ -60,13 +64,14 @@ def test_reverse_display():
     a.insert_at_start('c')
     a.insert_at_start('d')
     display = a.reverse_display()
-    if display is not None:
+    if display != ['b', 'c', 'd']:
         return False
     return True
 
 def run_all_tests():
     #try:
-    print('Test Insertion:', test_insertion())
+    print('Test Start Insertion:', test_insertion())
+    print('Test End Insertion:', test_end_insert())
     print('Test Deletion:', test_deletion())
     print('Test Search:', test_search())
     print('Test Search None:', test_search_none())
