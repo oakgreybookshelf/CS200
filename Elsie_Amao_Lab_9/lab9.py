@@ -41,7 +41,23 @@ def find_degree(vertex):
     return total
 
 def find_neighborhood(vertex):
-    pass
+    matrix = adj_matrix()
+    nodes = ['a', 'c', 'g', 'h', 't']
+    answer = []
+    for value in range(len(matrix[nodes.index(vertex)])):
+        if matrix[nodes.index(vertex)][value] == 1:
+            answer.append(nodes[value])
+    return answer
+        
+    '''
+    for value in matrix[nodes.index(vertex)]:
+        print(nodes[value], value)
+        if value == 1:
+            answer.append(matrix.index(value))
+        print(matrix.index(vertex))
+    '''
+    return answer
+
 '''
 neighbors = []
 for i in range(5):
@@ -49,22 +65,11 @@ for i in range(5):
         neighbors.append(i)
 # neighbors now contains all vertices connected to 3
 '''
+
 def find_path(matrix, source_vertex, destination_vertex, answer):
     nodes = ['A', 'C', 'G', 'H', 'T']
     sv = source_vertex
     dv = destination_vertex
-    '''
-    if sv == 'A':
-        for num in mat[0]:
-            if mat[0][1] = dv:
-                answer.append(dv)
-    for list in mat:
-        for value in mat[list]:
-            if value[1] == dv:
-                dv = list
-                answer.append(dv)
-            else:
-    '''
     #copy = matrix
     while matrix:
         if answer != []:
@@ -107,7 +112,8 @@ Choose an action from the menu:
             vertex = input("Enter the vertex you want the degree of: ")
             print("The degree of vertex", vertex, "is", find_degree(vertex))
         elif choice == "2":
-            pass 
+            vertex = input("Enter vertex: ") 
+            print("The adjacent vertices are:", find_neighborhood(vertex))
         elif choice == "3":
             source = input("Enter the the source vertex: ")
             destination = input("Enter the the destination vertex: ")
