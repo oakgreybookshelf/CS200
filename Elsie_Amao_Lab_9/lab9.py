@@ -56,7 +56,7 @@ def find_neighborhood(vertex):
             answer.append(matrix.index(value))
         print(matrix.index(vertex))
     '''
-    return answer
+    
 
 '''
 neighbors = []
